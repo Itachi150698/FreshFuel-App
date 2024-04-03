@@ -1,0 +1,17 @@
+<!-- <div *ngIf="tags">
+  <a *ngFor="let tag of tags" routerLinkActive="active" routerLink="/tag/{{ tag.name }}">
+    {{ tag.name }}({{ tag.count }})
+  </a>
+</div> -->
+
+<div *ngIf="tags" class="col-lg-8 text-center">
+  <ul class="nav nav-pills justify-content-center mb-2">
+    <li class="nav-item" *ngFor="let tag of tags">
+      <a class="nav-link m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" routerLinkActive="active" routerLink="/tag/{{ tag.name }}">
+        <span class="text-dark">{{ tag.name }} ({{ tag.count }})</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+

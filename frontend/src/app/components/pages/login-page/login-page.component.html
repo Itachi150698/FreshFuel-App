@@ -1,0 +1,41 @@
+<!-- Single Page Header start -->
+ <div class="container-fluid page-header py-5">
+  <h1 class="text-center text-white display-6">Login</h1>
+  <ol class="breadcrumb justify-content-center mb-0">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Pages</a></li>
+      <li class="breadcrumb-item active text-white">Checkout</li>
+  </ol>
+</div>
+<!-- Single Page Header End -->
+
+<div class="container">
+  <div class="details">
+    <app-title title="Login"></app-title>
+
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+
+    <text-input
+    [control]="fc.email"
+    [showErrorsWhen]="isSubmitted"
+    type="email"
+    label="Email">
+  </text-input>
+
+  <text-input
+  [control]="fc.password"
+  [showErrorsWhen]="isSubmitted"
+  type="password"
+  label="Password">
+</text-input>
+
+    <default-button text="Login"></default-button>
+    <div class="register">
+      New user? &nbsp;
+      <a routerLink="/register" [queryParams]="{returnUrl : returnUrl}">
+        Register here
+      </a>
+    </div>
+    </form>
+  </div>
+</div>
